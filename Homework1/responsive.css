@@ -1,0 +1,144 @@
+
+
+@media(max-width:1136px){
+    .container {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding-left:20px;
+        padding-right:20px;
+
+}
+
+}
+
+
+@media(max-width:940px)
+{
+ul > li{margin-left:40px;}
+ 
+.banner-title h1{width:100%;}
+
+.logo span{display:none;}
+
+.menu-wrap{
+    display:flex;
+    align-items:center;
+}
+}
+
+@media(max-width:860px){
+
+.see-demo{width:100%;
+          text-align:center;
+          }
+
+.contact-btn, .action-btn {
+            background: #9B9BCA;
+            padding: 17px 50px;}
+
+.support{display:flex;
+         flex-direction:column;
+         text-align:center;}
+
+.support-24 img{max-width:100%;
+                height:auto;
+                display:block;}
+
+.support-title p{width:100%;
+                     margin-bottom:100px;}   
+
+.feature-wraper{display:flex;
+                flex-direction:column;
+                margin-bottom:100px;}
+
+    .feature-items {width:100%;
+                margin-left:0;
+                margin-bottom:50px;
+               } 
+    
+            }
+
+@media(max-width:800px){
+
+header{position:relative;
+       height:0;}
+
+
+ul > li{margin-left:0;
+       }
+
+
+
+ul>li>a {color:#fff;
+    display:block;
+    padding:17px 67px;
+    border-radius:10px;}
+
+ul>li> a:hover{text-shadow:none;
+               background:#000;
+               }
+
+.contact-btn{background:red;
+            }
+
+
+
+
+.main-nav{display:flex;
+         flex-direction:column;
+         align-items:center;
+         position:fixed;
+         top:0;
+         right:-100%;
+         background:rgba(0, 0, 0, 0.438);
+         height:100vh;
+         width:100%;
+         transition:all 1s ease-out;
+         padding:20px 0;}
+
+.logo{display:none;}
+
+.menu_icon{display:flex;
+           }
+
+.menu_icon span {
+    width:80%;
+    height:4px;
+    background:#fff;
+    display:block;
+   transition:all 0.55s ease-in-out;
+    }
+   
+
+.menu_icon.active span:nth-child(1) {
+   transform: translateX(1px) translateY(13px)rotate(45deg);
+}
+
+.menu_icon.active span:nth-child(2){
+transform:translateY(250px);
+opacity:0;
+}
+
+.menu_icon.active span:nth-child(3) {
+    transform: rotate(-402deg) translateX(11px) translateY(-13px);
+}
+ 
+header{position:relative;}
+
+.banner-title{text-align:center;
+              text-shadow:1px 1px 1px #ccc;
+              }
+
+
+
+}
+
+
+@media(max-width:500px){
+ .see-demo{margin:117px 0px 75px 0px;}
+ .banner-area{padding-top:150px;}
+ .banner-title h1,.see-demo,h2,h3{font-size:40px;}
+  
+  .features h2,.support-title h2{font-size:24px;}
+ }
+
