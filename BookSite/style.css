@@ -18,7 +18,7 @@ sans-serif;
 img{display:block;
     width:100%;
     height:100%;
-    object-fit:cover;}
+    }
 
 
 a {
@@ -215,6 +215,7 @@ header ul a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .testimonials h2 {
@@ -292,6 +293,7 @@ header ul a {
     background-color: #2F2E2F;
     padding-top: 130px;
     padding-bottom: 130px;
+    margin-bottom:130px;
 }
 
 .news h2 {
@@ -377,11 +379,67 @@ header ul a {
     display: block;
 }
 
+/* Order_book */
+
+.book_order{display:flex;
+            flex-direction:column;
+            align-items: center;
+            margin-bottom:123px;}
 
 
+.book_order .content{display:flex;
+    justify-content:space-between;
+    position:relative;
+     }
+            
+.book_order .item { width:calc(33.333333% - 20px);
+                   background:#2F2E2F;
+                   padding:50px 0 33px 30px;
+                   overflow:hidden;}
+
+.book_order h2{margin-bottom:121px;} 
 
 
+.book_order .item h3{color:#fff;
+                     font-size:22px;
+                     margin-bottom:21px;}
 
+.book_order .item p{font-family: 'Roboto',
+    sans-serif;
+    color:#fff;
+    font-weight:400;
+    font-size:16px;
+    line-height:24px;
+    margin-right:50px;
+   }
+
+
+/* .book_order .item::before{
+    content:'01';
+    display:block;
+    font-size:160px;
+    font-weight:600;
+    color:#000;
+    opacity:0.1;
+    position:absolute;
+    top:0;
+    transform:translateY(-110px);
+
+} */
+
+.book_order span{font-size:160px;
+                 font-weight:600;
+                 color:#000;
+                 opacity:0.1;
+                 position:absolute;
+                 top:0;
+                 z-index:-1;
+                 transform:translateY(-110px);
+                 }
+
+.book_order .item img{
+    object-fit:contain;
+                     }
 
 
 
@@ -401,8 +459,9 @@ Books page Styles */
 
 
 .books-banner .container {
-    display: flex;
-    align-items: center;}
+display:flex;
+align-items:center;
+   }
 
 
 .books-banner h1 {
@@ -472,7 +531,8 @@ Books page Styles */
 
 
 .book-item img{margin-bottom:30px;
-               object-fit:cover;
+               -o-object-fit:cover;
+                  object-fit:cover;
                
                }
 
@@ -542,7 +602,7 @@ Books page Styles */
               }
 
 
-.contacts-map img {object-fit:cover;
+.contacts-map img {-o-object-fit:cover;object-fit:cover;
                    }
 
 
@@ -617,4 +677,7 @@ footer .transparent_button {
    }
 
 footer .transparent_button:hover{opacity:.6;}
+
+
+
 
