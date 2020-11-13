@@ -93,6 +93,7 @@ header .logo {
     top: 0;
     width: 170px;
     height: 160px;
+    transition:all .4s ease-in;
 }
 
 header ul {
@@ -398,7 +399,8 @@ header ul a {
 .book_order .item { width:calc(33.333333% - 20px);
                    background:#2F2E2F;
                    padding:50px 0 33px 30px;
-                   overflow:hidden;}
+                   overflow:hidden;
+                   transition:all.6s ease-in-out;}
 
 .book_order h2{margin-bottom:121px;} 
 
@@ -426,7 +428,7 @@ header ul a {
                  top:0;
                  z-index:-1;
                  transform:translateY(-110px);
-                 }
+                 transition:all.6s ease-in-out;}
 
 .book_order .item img{
     object-fit:contain;
@@ -607,12 +609,11 @@ align-items:center;
                   }
 
 
-.contacts-details .social-items{margin:0;
-                                }
-  
-.social-links  path{transition:.6s all ease-in-out;}                               
 
-.social-links path:hover{
+  
+.contact-socials  path{transition:.6s all ease-in-out;}                               
+
+.contact-socials path:hover{
                   fill:#000;
                  }
 
@@ -681,5 +682,17 @@ footer .transparent_button {
 footer .transparent_button:hover{opacity:.6;}
 
 
+
+#order_book .item.animate{transform:scale(1.1);
+                          transition:all .6s ease-in-out;
+                          overflow:visible;}
+
+#order_book span.active{ 
+                         opacity:1;
+                         color:#000;
+                         font-size:70px; }  
+                         
+ .logo.change{width:80px;
+               height:80px;}                        
 
 
