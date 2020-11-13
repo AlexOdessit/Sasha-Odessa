@@ -16,29 +16,36 @@ burger.addEventListener('click', function () {
 
 // Homepage order items
 
- let orderitem = document.getElementById('order_book').getElementsByClassName('item')[0];
- orderitem .addEventListener('mouseover', function () {
+ let orderitem = document.getElementById('order_book').getElementsByClassName('item');
+ for (i=0;i<orderitem.length;i++){
+ let itemanimate = orderitem[i];
+  itemanimate .addEventListener('mouseover', function () {
+    itemanimate .classList.add('animate');
+  });
+  itemanimate .addEventListener('mouseout', function () {
+    
+  itemanimate .classList.remove('animate');
+
+ });
+
+ }
+//  orderitem .addEventListener('mouseover', function () {
  
-orderitem .classList.add('animate');
+// orderitem .classList.add('animate');
  
- let number = document.getElementById('order_book').getElementsByTagName('span')[0];
-         number. classList.add('active'); 
-    });
+//  let number = document.getElementById('order_book').getElementsByTagName('span')[0];
+//          number. classList.add('active'); 
+//     });
 
  
-    orderitem .addEventListener('mouseout', function () {
+//     orderitem .addEventListener('mouseout', function () {
     
-   orderitem .classList.remove('animate');
+//    orderitem .classList.remove('animate');
     
-   let number = document.getElementById('order_book').getElementsByTagName('span')[0];
-            number. classList.remove('active'); 
-       });
+//    let number = document.getElementById('order_book').getElementsByTagName('span')[0];
+//             number. classList.remove('active'); 
+//        });
    
-      
-// /for (i=0;i<orderitem.length;i++){
-
-//     // orderitem[i].classList.toggle('active');
-// //   }
 
 
 

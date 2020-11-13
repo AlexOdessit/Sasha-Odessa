@@ -400,7 +400,8 @@ header ul a {
                    background:#2F2E2F;
                    padding:50px 0 33px 30px;
                    overflow:hidden;
-                   transition:all.6s ease-in-out;}
+                   transition:all.6s ease-in-out;
+                   cursor:pointer;}
 
 .book_order h2{margin-bottom:121px;} 
 
@@ -435,7 +436,14 @@ header ul a {
    }
 
 
+ #order_book .item.animate{transform:scale(1.1);
+    transition:all .6s ease-in-out;
+    overflow:visible;}
 
+#order_book span.active{ 
+   opacity:1;
+   color:#000;
+   font-size:70px; }  
 
 
 /* 
@@ -546,6 +554,10 @@ align-items:center;
 .books-catalog-btn{display:flex;
                    justify-content:center;
                    margin-bottom:174px;}
+
+
+
+
 
 
 /* Contacts */
@@ -683,14 +695,7 @@ footer .transparent_button:hover{opacity:.6;}
 
 
 
-#order_book .item.animate{transform:scale(1.1);
-                          transition:all .6s ease-in-out;
-                          overflow:visible;}
 
-#order_book span.active{ 
-                         opacity:1;
-                         color:#000;
-                         font-size:70px; }  
                          
  .logo.change{width:80px;
                height:80px;}                        
