@@ -23,7 +23,7 @@ img{display:block;
 
 a {
     display: inline-block;
-    transition:all .6s ease-in;
+    transition:all .4s ease-in;
     text-decoration: none;
 }
 
@@ -93,7 +93,7 @@ header .logo {
     top: 0;
     width: 170px;
     height: 160px;
-    transition:all .4s ease-in;
+    transition:all .6s ease-in;
 }
 
 header ul {
@@ -236,6 +236,8 @@ header ul a {
     color: #fff;
     padding: 69px 40px 62px;
     position: relative;
+    transition:all.6s ease-in-out;
+    cursor:pointer;
 }
 
 .testimonials .face {
@@ -313,6 +315,8 @@ header ul a {
     width: calc(25% - 27px);
     background-color: #fff;
     position: relative;
+    transition:.4s ease-in-out;
+    cursor:pointer;
 }
 
 .news .item a {
@@ -344,7 +348,7 @@ header ul a {
     border-color: transparent;
     border-left-color: #fff;
     opacity: 0;
-    transition: all .4s;
+    transition:all.6s ease-in-out;
 }
 
 .news .item:hover::before {
@@ -436,9 +440,9 @@ header ul a {
    }
 
 
- #order_book .item.animate{transform:scale(1.1);
-    transition:all .6s ease-in-out;
-    overflow:visible;}
+ .item.animate{transform:scale(1.1);
+               transition:all .6s;
+ }
 
 #order_book span.active{ 
    opacity:1;
@@ -530,7 +534,9 @@ align-items:center;
 
 
 .books-list-catalog .book-item{font-family:'Roboto',
-        sans-serif;}
+        sans-serif;
+      transition:all .4s ease-in;
+      cursor:pointer;}
 
 
 
@@ -623,7 +629,7 @@ align-items:center;
 
 
   
-.contact-socials  path{transition:.6s all ease-in-out;}                               
+.contact-socials path{transition:.6s all ease-in-out;}                               
 
 .contact-socials path:hover{
                   fill:#000;
@@ -697,7 +703,7 @@ footer .transparent_button:hover{opacity:.6;}
 
 
                          
- .logo.change{width:80px;
-               height:80px;}                        
+ .logo.change{width:60px;
+             height:60px;}                        
 
 

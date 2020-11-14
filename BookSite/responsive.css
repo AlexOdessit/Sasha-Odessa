@@ -336,17 +336,19 @@ footer .transparent_button{display:none;}
  .books-list-tabs li {
             max-width:50%;
            
-           }              
+           }
+           
+.contacts-details a{font-size:16px;}          
+
            
  }    
     
-                  
-.contacts-details a{font-size:16px;}
-
-        
 @media(max-width:500){
 
-
+.books-list-catalog{
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+           }
 
 h1{font-size:25px;}
 
