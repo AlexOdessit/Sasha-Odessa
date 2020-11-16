@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body{padding:50px 50px;
+    }
+   h1{text-align:center;
+      margin-bottom:20px;}
+
+   p,button{margin-bottom:20px;
+            cursor:pointer;
+            }
+  button{padding:10px;
+         border-radius:4px;
+         border:2px solid #000;
+         transition:.4s all ease-in-out;}
+ 
+  #get_text:hover{background:red;}
+
+
+ button:hover{background:rgb(12, 6, 1);
+              color:#fff;
+              }
+
+
+ p.color{color:#fff;
+          background:red;
+          font-size:18px;
+          transition:.4s all ease-in-out;}
+
+
+
+.second.remove{display:none;}
+
+
+
+
+

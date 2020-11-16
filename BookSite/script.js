@@ -7,9 +7,9 @@ burger.addEventListener('click', function () {
 
 
 window.addEventListener('scroll', function(){
-   let small = document.getElementsByClassName('logo')[0];
-   let top = window.scrollY;
-   if (top>150){
+let small = document.getElementsByClassName('logo')[0];
+let top = window.scrollY;
+  if (top>150){
      small.classList .add('change');
    }
    else{
@@ -18,28 +18,22 @@ window.addEventListener('scroll', function(){
    
   });
 
-
-
 // Animate items
-let orderitem = document.getElementsByClassName('item');
-// let number = document.getElementById('order_book').getElementsByTagName('span');
-for (i=0;i<orderitem.length;i++){
- let itemanimate = orderitem[i];
-itemanimate .addEventListener('mouseover', function () {
-itemanimate .classList.add('animate');});
-  
-itemanimate .addEventListener('mouseout', function () {
+let item = document.getElementsByClassName('item');
+for (i=0;i<item.length;i++){
+ let itemanimate = item[i];
+ item[i].addEventListener('mouseover', function () {
+itemanimate .classList.add('animate');
+});
+item[i] .addEventListener('mouseout', function () {
 itemanimate .classList.remove('animate');
- });
-
+});
 }
 
 
-
-
-
-
-
-
-
+// let orderitem = document.querySelectorAll('.order_item').forEach(function (e) {
+//   e.addEventListener('mouseover', function() {
+//     e.classList.add('active');
+//   });
+// });
 

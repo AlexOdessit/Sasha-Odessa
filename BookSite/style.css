@@ -443,11 +443,10 @@ header ul a {
  .item.animate{transform:scale(1.1);
                transition:all .6s;
  }
-
-#order_book span.active{ 
+ .order_item span.active{ 
    opacity:1;
    color:#000;
-   font-size:70px; }  
+   font-size:100px;}  
 
 
 /* 
@@ -703,7 +702,7 @@ footer .transparent_button:hover{opacity:.6;}
 
 
                          
- .logo.change{width:60px;
-             height:60px;}                        
+ .logo.change{width:70px;
+             height:70px;}                        
 
 
