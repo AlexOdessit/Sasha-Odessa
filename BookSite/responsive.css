@@ -1,23 +1,24 @@
-@media screen and (max-width:1215px){
+@media screen and (max-width:1215px) {
 
 
     .books-list-tabs {
-        display:flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        } 
-   
-         .books-list-tabs a {
-          display:block;
-          width:200px;
-          max-width:100%;
-          padding:20px 20px;}
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .books-list-tabs a {
+        display: block;
+        width: 200px;
+        max-width: 100%;
+        padding: 20px 20px;
+    }
 
 }
 
 @media screen and (max-width:1100px) {
 
-   
+
 
     h2 {
         font-size: 36px;
@@ -35,16 +36,18 @@
         padding-left: 40px;
     }
 
-   
 
-    
+
+
 
 }
 
 @media screen and (max-width:992px) {
-    
-    .brown_button{min-width:200px;
-                padding:15px 15px;}  
+
+    .brown_button {
+        min-width: 200px;
+        padding: 15px 15px;
+    }
 
     header ul {
         position: fixed;
@@ -171,60 +174,83 @@
     .about_us .left img {
         max-width: 500px;
     }
-    h1{font-size:36px;}
 
-   
-    .book-item span {font-size:28px;}
+    h1 {
+        font-size: 36px;
+    }
 
-    .books-list-tabs a{font-size:16px;
-                       padding:15px 15px;}
 
-    .contacts-details a{font-size:18px;
-                        margin-bottom:15px;}
+    .book-item span {
+        font-size: 28px;
+    }
 
-    
-.contacts{background:none;
-    padding:20px 0 0;
-    min-height:0;}
+    .books-list-tabs a {
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+
+    .contacts-details a {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+
+    .contacts {
+        background: none;
+        padding: 20px 0 0;
+        min-height: 0;
+    }
 
     footer .container {
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:space-around;}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.footer-nav li{width:30%;}
-
-
+    .footer-nav li {
+        width: 30%;
     }
 
 
+}
 
-@media (max-width:800px){
-.book-item span {font-size: 22px;                 
-            
+
+
+@media (max-width:800px) {
+    .book-item span {
+        font-size: 22px;
+
     }
+
     .book-item h3 {
         font-size: 14px;
-        margin-bottom:10px;}  
-        
-        
-        .contacts .container {
-            display: flex;
-            flex-direction:column;
-            padding:20px 0;}
-        
+        margin-bottom: 10px;
+    }
 
-        
-        .contacts-details {
-            display:flex;
-            width:100%;
-            flex-direction: column;
-            flex-wrap:wrap;
-            text-align:center;}
-        
-.contacts-map{width:100%;}
 
-.contacts h2{margin-bottom:20px;}
+    .contacts .container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+
+
+    .contacts-details {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .contacts-map {
+        width: 100%;
+    }
+
+    .contacts h2 {
+        margin-bottom: 20px;
+    }
 
 
 
@@ -236,35 +262,50 @@
 
 
 
-@media (max-width:740px){
+@media (max-width:740px) {
 
- 
-.book-item{text-align:center;}
 
-.books-list-catalog{display:grid;
-    grid-column-gap:10px;
-    grid-row-gap:30px;}
+    .book-item {
+        text-align: center;
+    }
 
-.books-list h2 { margin-bottom:30px;
-                text-align: center;}
+    .books-list-catalog {
+        display: grid;
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+    }
 
-          
+    .books-list h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
 
- footer .container {display: flex;
-                    flex-direction:column-reverse;
-                    align-items: center;
-                    text-align: center;}
-                
-footer .transparent_button{display:none;}               
- 
-.footer-nav{display:flex;
-    flex-wrap:wrap;
-    margin-top:30px;}
 
-.footer-nav li{
-       width:50%;}              
 
-.footer-contacts{margin-top:30px;}                                          
+    footer .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .transparent_button {
+        display: none;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .footer-nav li {
+        width: 50%;
+    }
+
+    .footer-contacts {
+        margin-top: 30px;
+    }
 
 }
 
@@ -274,7 +315,9 @@ footer .transparent_button{display:none;}
 
 @media screen and (max-width:600px) {
 
-    .brown_button{min-width:130px;}
+    .brown_button {
+        min-width: 130px;
+    }
 
     h1 {
         font-size: 32px;
@@ -320,36 +363,44 @@ footer .transparent_button{display:none;}
     }
 
 
-.books-catalog-btn{margin-bottom:100px;} 
+    .books-catalog-btn {
+        margin-bottom: 100px;
+    }
 
-.books-banner .right {
-    padding-left:30px;}
+    .books-banner .right {
+        padding-left: 30px;
+    }
 
-.books-banner p {
-        font-size: 16px;}  
+    .books-banner p {
+        font-size: 16px;
+    }
 
-.books-list-catalog{
-        display:grid;
-            grid-template-columns:repeat(2,1fr);
-           }
+    .books-list-catalog {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
- .books-list-tabs li {
-            max-width:50%;
-           
-           }
-           
-.contacts-details a{font-size:16px;}          
+    .books-list-tabs li {
+        max-width: 50%;
 
-           
- }    
-    
-@media(max-width:500){
+    }
 
-.books-list-catalog{
-    display:grid;
-    grid-template-columns:repeat(1,1fr);
-           }
+    .contacts-details a {
+        font-size: 16px;
+    }
 
-h1{font-size:25px;}
+
+}
+
+@media(max-width:500) {
+
+    .books-list-catalog {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        font-size: 25px;
+    }
 
 }

@@ -37,16 +37,16 @@ function AverageSum(arr2){
 
 // 3.Cумма парных - сумма непарных чисел
 function getNumDiffer(arr){
-let even =[];
-let odd = [];
+// let even =[];
+// let odd = [];
 let sum1 = 0;
 let sum2 = 0;
 for (let i=0;i<arr.length;i++){
 if (arr[i] %2==0){
-sum1 += even.push(arr[i]);  
+sum1 += arr[i];  
 }
 else {
- sum2 += odd.push(arr[i]);
+ sum2 += arr[i];
 }  
 }
  return sum1 - sum2;

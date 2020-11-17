@@ -13,14 +13,12 @@ btn1.onclick = function(e) {
  });
 
 // 3.Count of words in p 
- let wordscount = document .getElementsByClassName('first')[0];
+ let wordscount = document .getElementsByClassName('first')[0].innerText;
  let countbtn = document.getElementsByTagName('button')[2];
 //  console.log(countbtn);
  for (i=0;i<=wordscount.length;i++){
- let totalcount = 0;  
- totalcount += wordscount[i];
  countbtn.addEventListener('click' ,function(){
- console.log(totalcount); 
+
 });
  }
 
@@ -29,7 +27,7 @@ btn1.onclick = function(e) {
  let txt = document.getElementsByTagName('p')[1];
 //  console.log(txt);
   alertbtn.addEventListener('click',function(){
-  alert(txt.textContent);
+  alert(txt.innerText);
   txt.remove();
   });
 
