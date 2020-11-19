@@ -88,7 +88,7 @@
 
   header .burger span::before,
   header .burger span::after {
-    content: "";
+    content: '';
     width: 40px;
     height: 1px;
     background-color: #fff;
@@ -193,7 +193,8 @@
     justify-content: space-evenly;
   }
 
-  .book-item span {
+  .book-item span,
+  .slide span {
     font-size: 28px;
   }
 
@@ -236,11 +237,33 @@
 }
 
 @media (max-width: 800px) {
-  .book-item span {
+  .book-item span,
+  .slide span {
     font-size: 22px;
   }
 
-  .book-item h3 {
+  .book-slider h2 {
+    font-size: 32px;
+  }
+
+  .arrow-left,
+  .arrow-right img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .arrow-left {
+    position: absolute;
+    left: 80px;
+  }
+
+  .arrow-right {
+    position: absolute;
+    right: 80px;
+  }
+
+  .book-item h3,
+  .slide h3 {
     font-size: 14px;
     margin-bottom: 10px;
   }
@@ -284,6 +307,10 @@
   .book_order .item {
     width: calc(50% - 20px);
     margin-bottom: 15px;
+  }
+
+  .slide {
+    text-align: center;
   }
 }
 
@@ -355,6 +382,16 @@
 }
 
 @media screen and (max-width: 600px) {
+  .book-slider h2 {
+    font-size: 26px;
+  }
+
+  .slide img {
+    width: 300px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .brown_button {
     min-width: 130px;
   }
