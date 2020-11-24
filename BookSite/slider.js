@@ -1,10 +1,11 @@
+
+$(document).ready(function(){
 $('.slider').slick({
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 2,
   dots: true,
   arrows: true,
-  autoplay: true,
   dotsClass: 'my-dots',
   prevArrow: '.arrow-left',
   nextArrow: '.arrow-right',
@@ -31,9 +32,12 @@ $('.slider').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
-        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        dots: true,
+        arrows: false,
       },
     },
   ],
+});
 });

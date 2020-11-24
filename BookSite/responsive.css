@@ -234,6 +234,16 @@
     width: calc(50% - 20px);
     margin: 10px;
   }
+
+  .arrow-left {
+    position: absolute;
+    left: 80px;
+  }
+
+  .arrow-right {
+    position: absolute;
+    right: 80px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -250,16 +260,6 @@
   .arrow-right img {
     width: 28px;
     height: 28px;
-  }
-
-  .arrow-left {
-    position: absolute;
-    left: 80px;
-  }
-
-  .arrow-right {
-    position: absolute;
-    right: 80px;
   }
 
   .book-item h3,
@@ -492,6 +492,11 @@
 
   .testimonials .text {
     text-align: center;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: none;
   }
 }
 
