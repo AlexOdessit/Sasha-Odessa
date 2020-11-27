@@ -872,6 +872,7 @@ Single-book page */
 .single_book__btn {
   min-width: 200px;
 }
+
 .buy-book .left::before {
   content: '';
   width: 50vw;
