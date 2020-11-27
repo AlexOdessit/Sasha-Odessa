@@ -466,12 +466,12 @@
 
   .news .item {
     width: calc(100% - 10px);
-    margin: 10px;
+    margin: 20px;
   }
 
   .book_order .item {
     width: calc(100% - 0px);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     max-width: 350px;
   }
 
