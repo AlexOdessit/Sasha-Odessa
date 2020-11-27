@@ -16,10 +16,10 @@ titlebtn.addEventListener('click', function () {
 // 3.Count of words in p 
 let countbtn = document.getElementsByTagName('button')[2];
 countbtn.addEventListener('click', function () {
-    let wordscount = document.getElementsByClassName('first')[0].innerText;
+    let wordscount = document.getElementsByClassName('first')[0].textContent;
     let myarr = wordscount.split(' ');
     let innerText1 = document.getElementsByClassName('counter')[0];
-    innerText1.innerText += myarr.length;
+    innerText1.textContent += myarr.length;
     console.log(myarr.length);
 });
 
