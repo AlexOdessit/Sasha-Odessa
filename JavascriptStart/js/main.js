@@ -86,19 +86,19 @@
 
 
 
-// function MyArray(a) {
-//   let arr1 = [];
-//   for (let i = 0; i < a.length; i++) {
-//       if (a[i] % 2 == 0) {
-//           if (typeof (a[i]) === 'number') {
-//               arr1.push(a[i]);
-//           }
-//       }
-//   }
-//   return arr1;
-// }
-// //let b = MyArray([4, 7, 20, 15, 17, 22]);
-// console.log(MyArray([4, 7, 20, 15, 17, 22]));
+function MyArray(a) {
+  let arr1 = [];
+  for (let i = 0; i < a.length; i++) {
+      if (a[i] % 2 == 0) {
+          if (typeof (a[i]) === 'number') {
+              arr1.push(a[i]);
+          }
+      }
+  }
+  return arr1;
+}
+//let b = MyArray([4, 7, 20, 15, 17, 22]);
+console.log(MyArray([4, 7, 20, 15, 17, 22]));
 
 
 

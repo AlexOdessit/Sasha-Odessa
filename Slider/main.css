@@ -1,0 +1,32 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+
+
+.slider_overlay{
+    max-width:1200px;
+    padding-top:120px;
+    margin-right:auto;
+    margin-right:auto;
+    overflow-x:hidden;
+}
+
+.slider{
+    display:flex;
+   width:fit-content;}
+
+.slide{
+    padding-right:15px;
+    padding-left:15px;
+}
+
+img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}

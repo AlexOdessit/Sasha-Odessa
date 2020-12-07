@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header_container">
+        <div class="cart_box">
+            <div class="cart">
+                <h2>Cart</h2>
+                <div class="product_content">
+                    <span>remove</span>
+                </div>
+
+                <i class="far fa-times-circle close_btn"></i>
+            </div>
+        </div>
+        <div class="my_cart">
+            <a href="javascript:void(0)" class="get_cart">
+                <p>0</p>
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </div>
+    <div class="shop_container">
+        <div class="product item"> <img src="nike-jordan.jpg" alt="">
+            <h1>Nike Jordan</h1>
+            <div class="price">
+                <p>Old price:<span>400$</span></p>
+                <h3>Sale Price:<span>280$</span></h3>
+            </div>
+            <div class="input_block">
+                <input type="checkbox" name="black" id="color" value="black">
+                <label for="color">Black</label>
+                <input type="checkbox" name="white" id="color" value="white">
+                <label for="color">White</label>
+                <input type="checkbox" name="red" id="color" value="red">
+                <label for="color">Red</label>
+            </div>
+            <div class="size_block">
+                <h3>Size:</h3>
+                <span>42</span>
+                <span>43</span>
+                <span>45</span>
+            </div>
+            <button>Add to cart</button>
+        </div>
+
+        <div class="product item"> <img src="nike-air.jpg" alt="">
+            <h1>Nike Air</h1>
+            <div class="price">
+                <p>Old price :<span>180$</span></p>
+                <h3>Sale Price:<span>140$</span></h3>
+            </div>
+            <div class="input_block">
+                <input type="checkbox" name="black" id="color" value="black">
+                <label for="color">Black</label>
+                <input type="checkbox" name="white" id="color" value="white">
+                <label for="color">White</label>
+                <input type="checkbox" name="red" id="color" value="red">
+                <label for="color">Red</label>
+            </div>
+            <div class="size_block">
+                <h3>Size:</h3>
+                <span>42</span>
+                <span>43</span>
+                <span>45</span>
+            </div>
+
+            <button>Add to cart</button>
+        </div>
+
+
+        <div class="product item"> <img src="air-max.jpg" alt="">
+            <h1>Air Max</h1>
+            <div class="price">
+                <p>Old price :<span>200$</span></p>
+                <h3>Sale Price:<span>175$</span></h3>
+            </div>
+            <div class="input_block">
+                <input type="checkbox" name="black" id="color" value="black">
+                <label for="color">Black</label>
+                <input type="checkbox" name="white" id="color" value="white">
+                <label for="color">White</label>
+                <input type="checkbox" name="red" id="color" value="red">
+                <label for="color">Red</label>
+            </div>
+            <div class="size_block">
+                <h3>Size:</h3>
+                <span>42</span>
+                <span>43</span>
+                <span>45</span>
+            </div>
+            <button>Add to cart</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
