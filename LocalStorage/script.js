@@ -17,8 +17,6 @@ $(document).ready(function () {
       image: img,
       oldprice: old,
       saleprice: parseInt(sale),
-      color: ['black', 'white', 'red'],
-      size: ['42', '43', '45'],
       count: 1,
     };
     if (my_storage === null) {
@@ -75,12 +73,14 @@ $(document).ready(function () {
     }
 
     function onloadCartNum() {
+      let counter = $('.get_cart p');
       let prdCount = localStorage.getItem('cartCount');
       if (prdCount) {
         counter.innerHTML = prdCount;
         // console.log(prdCount);
       }
     }
+
     cartCount();
     onloadCartNum();
   });
@@ -92,7 +92,7 @@ $(document).ready(function () {
     let cartContent = $('.cart');
     let cartItems = localStorage.getItem('products');
     cartItems = JSON.parse(cartItems);
-    let newarr = cartItems
+    cartItems
       .map(function (items) {
         return cartContent.append(
           '<div class="product_content"><h3>Hello</h3></div>'
