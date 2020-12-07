@@ -250,6 +250,39 @@
 }
 
 @media (max-width: 800px) {
+  .buy-book {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .buy-book .left {
+    width: 100%;
+    position: relative;
+  }
+
+  .buy-book .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .single-banner .left {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .buy-book .left {
+    padding: 0;
+  }
+
+  .single-banner .right {
+    padding: 0;
+  }
+
   .book-item span,
   .slide span {
     font-size: 22px;
@@ -257,6 +290,12 @@
 
   .book-slider h2 {
     font-size: 32px;
+  }
+
+  .single-banner .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .arrow-left,
@@ -392,6 +431,27 @@
     font-size: 26px;
   }
 
+  .single-banner .left {
+    text-align: right;
+  }
+
+  .single-content,
+  .single-banner {
+    margin-bottom: 80px;
+  }
+
+  .single-content h2 {
+    text-align: center;
+  }
+
+  .single-content p {
+    font-size: 16px;
+  }
+
+  .buy-book .right h2 {
+    font-size: 22px;
+  }
+
   .banner img {
     max-width: 100%;
   }
@@ -402,12 +462,16 @@
     margin-right: auto;
   }
 
+  .single-banner .right {
+    width: 100%;
+  }
+
   .brown_button {
     min-width: 130px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   h2 {
@@ -510,13 +574,16 @@
   }
 }
 
-@media (max-width: 500) {
+@media screen and (max-width: 500) {
+  p {
+    font-size: 14px;
+  }
   .books-list-catalog {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
