@@ -11,9 +11,11 @@ $(document).ready(function () {
     let old = $(this).parent('.product').find('.price p span').text();
     let sale = $(this).parent('.product').find('.price h3 span').text();
     let color = $(this).parent('.product').find('input');
+    let colorz = [];
     for (i = 0; i < color.length; i++) {
-      colorz = color[i].value;
+      colorz.push(color[i].value);
     }
+
     //  localStorage
     let my_product = {
       title: name,
