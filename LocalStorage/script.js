@@ -76,7 +76,6 @@ $(document).ready(function () {
   let cart = $('.cart_box');
   let closebtn = $('.close_btn');
   $('.get_cart').on('click', function () {
-    $('.product_content *').remove();
     cart.addClass('active');
     let cartItems = localStorage.getItem('products');
     let cartContent = $('.product_content');
@@ -103,5 +102,7 @@ $(document).ready(function () {
 
   closebtn.on('click', function () {
     cart.removeClass('active');
+    $('.product_content *').remove();
+    $('.total').remove();
   });
 });
