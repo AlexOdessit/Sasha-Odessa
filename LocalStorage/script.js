@@ -84,7 +84,10 @@ $(document).ready(function () {
     $('.get_cart').on('click', function () {
         my_str1 = JSON.parse(localStorage.getItem('products'));
         if (localStorage.getItem('products') === null || my_str1.products.length == 0) {
-            alert('No products');
+            $('.pop_up_overlay').addClass('active');
+            setTimeout(function(){
+                $('.pop_up_overlay').removeClass('active');
+            },3000);
         } else {
             cart.addClass('active');
             let cartItems = localStorage.getItem('products');
