@@ -10,9 +10,9 @@ $(document).ready(function () {
     let img = $(this).parent('.product').find('img').attr('src');
     let old = $(this).parent('.product').find('.price p span').text();
     let sale = $(this).parent('.product').find('.price h3 span').text();
-    let color = $(this).parent('.product').find('input').val();
+    let color = $(this).parent('.product').find('input');
     for (i = 0; i < color.length; i++) {
-      color[i] = colorz;
+      colorz = color[i].value;
     }
     //  localStorage
     let my_product = {
