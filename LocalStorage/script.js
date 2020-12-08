@@ -11,6 +11,9 @@ $(document).ready(function () {
     let old = $(this).parent('.product').find('.price p span').text();
     let sale = $(this).parent('.product').find('.price h3 span').text();
     let color = $(this).parent('.product').find('input').val();
+    for (i = 0; i < color.length; i++) {
+      color[i] = colorz;
+    }
     //  localStorage
     let my_product = {
       title: name,
@@ -18,7 +21,7 @@ $(document).ready(function () {
       oldprice: old,
       saleprice: parseInt(sale),
       count: 1,
-      colors: color,
+      colors: colorz,
     };
     if (my_storage === null) {
       let my_products = {
