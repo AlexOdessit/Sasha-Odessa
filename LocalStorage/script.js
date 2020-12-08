@@ -11,10 +11,10 @@ $(document).ready(function () {
     let old = $(this).parent('.product').find('.price p span').text();
     let sale = $(this).parent('.product').find('.price h3 span').text();
     let color = $(this).parent('.product').find('input');
-    // let colorz = [];
-    // for (i = 0; i < color.length; i++) {
-    //   colorz.push(color[i].value);
-    // }
+    let colorz = [];
+    for (i = 0; i < color.length; i++) {
+      colorz.push(color[i].value);
+    }
 
     //  localStorage
     let my_product = {
@@ -65,6 +65,7 @@ $(document).ready(function () {
     // Счетчик товаров в корзине
     let counter = $('.get_cart p');
     let prdCount = localStorage.getItem('cartCount');
+
     function cartCount() {
       prdCount = parseInt(prdCount);
       if (prdCount) {
@@ -81,28 +82,38 @@ $(document).ready(function () {
   let cart = $('.cart_box');
   let closebtn = $('.close_btn');
   $('.get_cart').on('click', function () {
-    cart.addClass('active');
-    let cartItems = localStorage.getItem('products');
-    let cartContent = $('.product_content');
-    let cartCost = localStorage.getItem('totalCost');
-    cartItems = JSON.parse(cartItems);
-    cartItems = cartItems.products;
-    cartItems.map(function (p) {
-      cartContent.append(
-        '<div class="product_content"><h3>' +
-          p.title +
-          '</h3> <img src = "' +
-          p.image +
-          '"><span>Price:' +
-          p.saleprice +
-          '$</span><span>' +
-          p.colors +
-          '</span><span>quantity:' +
-          p.count +
-          '</span></div>'
+    my_str1 = JSON.parse(localStorage.getItem('products'));
+    if (
+      localStorage.getItem('products') === null ||
+      my_str1.products.length == 0
+    ) {
+      alert('No products');
+    } else {
+      cart.addClass('active');
+      let cartItems = localStorage.getItem('products');
+      let cartContent = $('.product_content');
+      let cartCost = localStorage.getItem('totalCost');
+      cartItems = JSON.parse(cartItems);
+      cartItems = cartItems.products;
+      cartItems.map(function (p) {
+        cartContent.append(
+          '<div class="product_content"><h3>' +
+            p.title +
+            '</h3> <img src = "' +
+            p.image +
+            '"><span>Price:' +
+            p.saleprice +
+            '$</span><span>' +
+            p.colors +
+            '</span><span>quantity:' +
+            p.count +
+            '</span></div>'
+        );
+      });
+      $('.cart_box').append(
+        '<h2 class ="total"> Total  ' + cartCost + '$</h2>'
       );
-    });
-    $('.cart_box').append('<h2 class ="total"> Total  ' + cartCost + '$</h2>');
+    }
   });
 
   closebtn.on('click', function () {
