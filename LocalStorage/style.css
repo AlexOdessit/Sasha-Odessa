@@ -54,17 +54,30 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   font-size: 18px;
 }
 
 .product_content span {
-  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
-.cart i {
+/* .product_content span:last-child {
+  margin-bottom: 20px;
+} */
+
+.total {
+  margin-bottom: 25px;
+}
+
+.product_content img {
+  width: 200px;
+  height: 150px;
+}
+
+.cart_box i {
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 10px;
   font-size: 25px;
   color: rgb(255, 145, 0);
@@ -170,6 +183,7 @@ button {
   color: #fff;
   outline: none;
   border: none;
+  margin-bottom: 50px;
 }
 
 button:hover,
@@ -189,4 +203,5 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
