@@ -83,10 +83,7 @@ $(document).ready(function () {
   let closebtn = $('.close_btn');
   $('.get_cart').on('click', function () {
     my_str1 = JSON.parse(localStorage.getItem('products'));
-    if (
-      localStorage.getItem('products') === null ||
-      my_str1.products.length == 0
-    ) {
+    if (localStorage.getItem('products') === null || my_str1.products.length == 0) {
       alert('No products');
     } else {
       cart.addClass('active');
@@ -110,9 +107,7 @@ $(document).ready(function () {
             '</span></div>'
         );
       });
-      $('.cart_box').append(
-        '<h2 class ="total"> Total  ' + cartCost + '$</h2>'
-      );
+      $('.cart_box').append('<h2 class ="total"> Total  ' + cartCost + '$</h2>');
     }
   });
 
