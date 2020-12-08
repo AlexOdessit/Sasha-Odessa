@@ -66,18 +66,38 @@ $(document).ready(function () {
     let counter = $('.get_cart p');
     let prdCount = localStorage.getItem('cartCount');
 
-    function cartCount() {
-      prdCount = parseInt(prdCount);
-      if (prdCount) {
-        localStorage.setItem('cartCount', prdCount + 1);
-        counter.text(prdCount + 1);
-      } else {
-        localStorage.setItem('cartCount', 1);
-        counter.text((prdcount = 1));
-      }
-    }
-    cartCount();
-  });
+    let cart = $('.cart_box');
+    let closebtn = $('.close_btn');
+    $('.get_cart').on('click', function () {
+        my_str1 = JSON.parse(localStorage.getItem('products'));
+        if (localStorage.getItem('products') === null || my_str1.products.length == 0) {
+            $('.pop_up_overlay').addClass('active');
+            setTimeout(function(){
+                $('.pop_up_overlay').removeClass('active');
+            },2000);
+        } else {
+            cart.addClass('active');
+            let cartItems = localStorage.getItem('products');
+            let cartContent = $('.product_content');
+            let cartCost = localStorage.getItem('totalCost');
+            cartItems = JSON.parse(cartItems);
+            cartItems = cartItems.products;
+            cartItems.map(function (p) {
+                cartContent.append(
+                    '<div class="product_content"><h3>' +
+                    p.title +
+                    '</h3> <img src = "' +
+                    p.image +
+                    '"><span>Price:' +
+                    p.saleprice +
+                    '$</span><span>' +
+                    p.colors +
+                    '</span><span>quantity:' +
+                    p.count +
+                    '</span></div>'
+                );
+            });
+            $('.cart_box').append('<h2 class ="total"> Total  ' + cartCost + '$</h2>');
 
   let cart = $('.cart_box');
   let closebtn = $('.close_btn');
