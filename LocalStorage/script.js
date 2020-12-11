@@ -110,12 +110,13 @@ $(document).ready(function () {
 
         let cartItems = JSON.parse(localStorage.getItem('products'));
         let cartContent = $('.product_content');
+        prdCount=localStorage.getItem('cartCount');
         let cartCost = localStorage.getItem('totalCost');
         cartItems = cartItems.products;
         cartItems.map(function (p) {
             cartContent.append(
                 `<div class="product_content"><h3>${p.title}</h3> <img src = "${p.image}"><span>Price:${p.saleprice}$</span><span>color:${p.colorz}</span><span>size:${p.sizes}</span><span>Models:${p.models}</span>
-        <span class="count-arrows"><i class="fas fa-chevron-left decrease"></i> ${p.count}<i class="fas fa-chevron-right increase"></i></span><button>remove item</button></div>`
+        <span class="count-arrows"><i class="fas fa-chevron-left decrease"></i><span> ${p.count}</span><i class="fas fa-chevron-right increase"></i></span><button>remove item</button></div>`
             );
         });
         $('.cart_box').append(`<h3 class ="total"> Total:${cartCost}$</h3> <h3 class="count">Total products:${prdCount}</h3>`);
@@ -123,12 +124,17 @@ $(document).ready(function () {
 
     $('body').on('click', '.cart_box button', function () {
         let pIndex = $(this).parent('.product_content').index();
+        let product_count=parseInt($(this).parent('.product_content').find('.count-arrows span').text());
+        console.log(product_count);
         $(this).parent('.product_content').remove();
         let items = JSON.parse(localStorage.getItem('products'));
         console.log(pIndex);
         let my_item = items.products;
         my_item.splice(pIndex, 1);
         localStorage.setItem('products', JSON.stringify(items));
+        let counter=parseInt(localStorage.getItem('cartCount'));
+        counter= counter - product_count;
+        localStorage.setItem('cartCount',counter);
     });
 
     $('body').on('click', '.increase', function () {
