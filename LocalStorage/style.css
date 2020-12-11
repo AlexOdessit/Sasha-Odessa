@@ -225,8 +225,7 @@ input::placeholder {
   color: #000;
 }
 input[type='number'] ::-webkit-inner-spin-button {
-  width: 20px;
-  height: 20px;
+  -webkit-appearance: none;
 }
 
 .size_block {

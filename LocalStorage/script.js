@@ -25,12 +25,13 @@ $(document).ready(function () {
       $('input[name="color"]:checked').val();
     } else {
       alert('Choose color');
+      localStorage.setItem('produtcs', my_storage === null);
     }
     let size = $(this).parent('.product').find('input[name = size]').val();
     if (size === null) {
       alert('choose size');
     } else {
-      alert(size);
+      console.log(size);
     }
 
     //  localStorage
@@ -99,7 +100,7 @@ $(document).ready(function () {
   let cart = $('.cart_box');
   $('.get_cart').on('click', function () {
     my_str1 = JSON.parse(localStorage.getItem('products'));
-    if (localStorage.getItem('products') === null || my_str1.products.length === 0) {
+    if (localStorage.getItem('products') === null || my_str1.products.length == 0) {
       $('.pop_up_overlay').addClass('active');
       setTimeout(function () {
         $('.pop_up_overlay').removeClass('active');
@@ -107,6 +108,7 @@ $(document).ready(function () {
     } else {
       cart.addClass('active');
     }
+
     let cartItems = JSON.parse(localStorage.getItem('products'));
     let cartContent = $('.product_content');
     let cartCost = localStorage.getItem('totalCost');
@@ -135,10 +137,12 @@ $(document).ready(function () {
 
   $('body').on('click', '.cart_box button', function () {
     $(this).parent('.product_content').remove();
-    let pIndex = $(this).parent('.product_content').index();
     let items = JSON.parse(localStorage.getItem('products'));
+    let pIndex = $(this).parent('.product_content').index();
+    console.log(pIndex);
     items = items.products;
     items.splice(pIndex, 1);
+    localStorage.setItem('products', JSON.stringify(items));
   });
 
   let closebtn = $('.close_btn');
