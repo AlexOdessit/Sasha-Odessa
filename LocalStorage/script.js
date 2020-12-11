@@ -25,7 +25,6 @@ $(document).ready(function () {
       $('input[name="color"]:checked').val();
     } else {
       alert('Choose color');
-      localStorage.setItem('produtcs', my_storage === null);
     }
     let size = $(this).parent('.product').find('input[name = size]').val();
     if (size === null) {
