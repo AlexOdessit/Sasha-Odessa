@@ -77,7 +77,7 @@ a {
   height: 150px;
 }
 
-.cart_box i {
+.cart_box .close_btn {
   position: absolute;
   left: 5px;
   top: 10px;
@@ -86,10 +86,17 @@ a {
   cursor: pointer;
 }
 
-.my_cart i {
+.my_cart .carticon {
   font-weight: 700;
   font-size: 30px;
   color: #e76f0c;
+}
+
+.count-arrows i {
+  color: red;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .get_cart {

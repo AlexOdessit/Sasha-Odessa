@@ -15,7 +15,6 @@ $(document).ready(function () {
     let arrm = '';
     for (i = 0; i < model.length; i++) {
       arrm = $(model[i]).text();
-      console.log(arrm).join(',');
     }
     // let year = [];
     // for (i = 0; i < model.length; i++) {
@@ -28,11 +27,6 @@ $(document).ready(function () {
       alert('Choose color');
     }
     let size = $(this).parent('.product').find('input[name = size]').val();
-    if (size === null) {
-      alert('choose size');
-    } else {
-      console.log(size);
-    }
 
     //  localStorage
     let my_product = {
@@ -115,24 +109,11 @@ $(document).ready(function () {
     cartItems = cartItems.products;
     cartItems.map(function (p) {
       cartContent.append(
-        '<div class="product_content"><h3>' +
-          p.title +
-          '</h3> <img src = "' +
-          p.image +
-          '"><span>Price:' +
-          p.saleprice +
-          '$</span><span>color:' +
-          p.colorz +
-          '</span><span>size:' +
-          p.sizes +
-          '</span><p>Models:' +
-          p.models +
-          '</p><span>quantity:' +
-          p.count +
-          '</span><button>remove item</button></div>'
+        `<div class="product_content"><h3>${p.title}</h3> <img src = "${p.image}"><span>Price:${p.saleprice}$</span><span>color:${p.colorz}</span><span>size:${p.sizes}</span><span>Models:${p.models}</span>
+        <span class="count-arrows"><i class="fas fa-chevron-left decrease"></i> ${p.count}<i class="fas fa-chevron-right increase"></i></span><button>remove item</button></div>`
       );
     });
-    $('.cart_box').append('<h3 class ="total"> Total:  ' + cartCost + '$</h3> <h3 class="count">Total products:' + prdCount + '</h3>');
+    $('.cart_box').append(`<h3 class ="total"> Total:${cartCost}$</h3> <h3 class="count">Total products:${prdCount}</h3>`);
   });
 
   $('body').on('click', '.cart_box button', function () {
@@ -143,6 +124,18 @@ $(document).ready(function () {
     items = items.products;
     items.splice(pIndex, 1);
     localStorage.setItem('products', JSON.stringify(items));
+  });
+
+  $('body').on('click', '.increase', function () {
+    alert('Im counter');
+    let countItems = JSON.parse(localStorage.getItem('products'));
+    countItems = countItems.products;
+    let countSum = 0;
+    for (let i = 0; i < countItems.length; i++) {
+      let counter = countItems[i].count;
+      countSum += counter;
+      // console.log(countSum);
+    }
   });
 
   let closebtn = $('.close_btn');
