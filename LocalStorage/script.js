@@ -15,6 +15,7 @@ $(document).ready(function () {
     let arrm = '';
     for (i = 0; i < model.length; i++) {
       arrm = $(model[i]).text();
+      console.log(arrm).join(',');
     }
     // let year = [];
     // for (i = 0; i < model.length; i++) {
