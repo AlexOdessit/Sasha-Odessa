@@ -5,98 +5,95 @@ $(document).ready(function () {
         counter.text(prdCount);
     }
 
-    $('input').on('change', function () {
-        if ($(this).prop('checked')) {
-            $('.add-btn').attr('disabled', false);
-        } else {
-            $('.add-btn').attr('disabled', true);
-        }
-    });
 
     $('button').on('click', function () {
-        let my_storage = localStorage.getItem('products');
-        let name = $(this).parent('.product').find('h1').text();
-        let img = $(this).parent('.product').find('img').attr('src');
-        let old = $(this).parent('.product').find('.price p span').text();
-        let sale = $(this).parent('.product').find('.price h3 span').text();
-        let model = $(this).parent('.product').find('.model span');
-        let arrm = '';
-        let color = $('input[name="color"]:checked').val();
-        let size = $(this).parent('.product').find('input[name = "size"]').val();
-
-        for (i = 0; i < model.length; i++) {
-            if (i == model.length - 1) {
-                arrm += $(model[i]).text();
-            } else {
-                arrm += $(model[i]).text() + ',';
-            }
-        }
-        // let year = [];
-        // for (i = 0; i < model.length; i++) {
-        //   year.push($(model[i]).text());
-        // }
-
-        //  localStorage
-        let my_product = {
-            title: name,
-            image: img,
-            oldprice: old,
-            saleprice: parseInt(sale),
-            count: 1,
-            colorz: color,
-            sizes: size,
-            models: arrm,
-        };
-        if (my_storage === null) {
-            let my_products = {
-                products: [my_product],
-            };
-
-            let myJSON = JSON.stringify(my_products);
-            localStorage.setItem('products', myJSON);
+        if (!$('input').prop('checked')) {
+            alert('No');
         } else {
-            my_storage = JSON.parse(my_storage);
-            my_products = my_storage.products;
-            let iter = 0;
-            for (let i = 0; i < my_products.length; i++) {
-                if (my_products[i].title == name) {
-                    let counts = my_products[i].count;
-                    counts++;
-                    my_products[i].count = counts;
-                    iter = 1;
+            let my_storage = localStorage.getItem('products');
+            let name = $(this).parent('.product').find('h1').text();
+            let img = $(this).parent('.product').find('img').attr('src');
+            let old = $(this).parent('.product').find('.price p span').text();
+            let sale = $(this).parent('.product').find('.price h3 span').text();
+            let model = $(this).parent('.product').find('.model span');
+            let arrm = '';
+            let color = $('input[name="color"]:checked').val();
+            let size = $(this).parent('.product').find('input[name = "size"]').val();
+
+            for (i = 0; i < model.length; i++) {
+                if (i == model.length - 1) {
+                    arrm += $(model[i]).text();
+                } else {
+                    arrm += $(model[i]).text() + ',';
                 }
             }
+            // let year = [];
+            // for (i = 0; i < model.length; i++) {
+            //   year.push($(model[i]).text());
+            // }
 
-            if (iter == 0) {
-                my_products.push(my_product);
-            }
-            my_storage = JSON.stringify(my_storage);
-            localStorage.setItem('products', my_storage);
-        }
-        //  Сумма товара
-        function totalCost() {
-            let cartCost = localStorage.getItem('totalCost');
-            if (cartCost != null) {
-                cartCost = parseInt(cartCost);
-                localStorage.setItem('totalCost', cartCost + my_product.saleprice);
+            //  localStorage
+            let my_product = {
+                title: name,
+                image: img,
+                oldprice: old,
+                saleprice: parseInt(sale),
+                count: 1,
+                colorz: color,
+                sizes: size,
+                models: arrm,
+            };
+            if (my_storage === null) {
+                let my_products = {
+                    products: [my_product],
+                };
+
+                let myJSON = JSON.stringify(my_products);
+                localStorage.setItem('products', myJSON);
             } else {
-                localStorage.setItem('totalCost', my_product.saleprice);
+                my_storage = JSON.parse(my_storage);
+                my_products = my_storage.products;
+                let iter = 0;
+                for (let i = 0; i < my_products.length; i++) {
+                    if (my_products[i].title == name) {
+                        let counts = my_products[i].count;
+                        counts++;
+                        my_products[i].count = counts;
+                        iter = 1;
+                    }
+                }
+
+                if (iter == 0) {
+                    my_products.push(my_product);
+                }
+                my_storage = JSON.stringify(my_storage);
+                localStorage.setItem('products', my_storage);
             }
-        }
-        totalCost();
-        // Счетчик товаров в корзине
-        function cartCounter() {
-            let prdCount = localStorage.getItem('cartCount');
-            if (prdCount != null) {
-                prdCount = parseInt(prdCount);
-                localStorage.setItem('cartCount', prdCount + 1);
-                counter.text(prdCount + 1);
-            } else {
-                localStorage.setItem('cartCount', 1);
-                counter.text((prdCount = 1));
+            //  Сумма товара
+            function totalCost() {
+                let cartCost = localStorage.getItem('totalCost');
+                if (cartCost != null) {
+                    cartCost = parseInt(cartCost);
+                    localStorage.setItem('totalCost', cartCost + my_product.saleprice);
+                } else {
+                    localStorage.setItem('totalCost', my_product.saleprice);
+                }
             }
+            totalCost();
+            // Счетчик товаров в корзине
+            function cartCounter() {
+                let prdCount = localStorage.getItem('cartCount');
+                if (prdCount != null) {
+                    prdCount = parseInt(prdCount);
+                    localStorage.setItem('cartCount', prdCount + 1);
+                    counter.text(prdCount + 1);
+                } else {
+                    localStorage.setItem('cartCount', 1);
+                    counter.text((prdCount = 1));
+                }
+            }
+            cartCounter();
         }
-        cartCounter();
     });
 
     let cart = $('.cart_box');
