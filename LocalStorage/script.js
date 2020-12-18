@@ -140,7 +140,6 @@ $(document).ready(function () {
   });
 
   $('body ').on('click', '.increase', function () {
-    // alert('Hello');
     let cartName = $('product_content h3').text();
     let cartItems = JSON.parse(localStorage.getItem('products'));
     let my_name = cartItems.products;
