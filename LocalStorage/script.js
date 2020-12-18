@@ -148,6 +148,7 @@ $(document).ready(function () {
     let itemcount = parseInt($(this).parent('.product_content').find('.count-arrows span').text());
     for (i = 0; i < my_name; i++) {
       if ($(my_name[i]) === cartName) {
+        itemcount++;
       }
     }
   });

@@ -14,20 +14,18 @@ titlebtn.addEventListener('click', function () {
 });
 
 // 3.Count of words in p 
-let countbtn = document.getElementsByTagName('button')[2];
-countbtn.addEventListener('click', function () {
-    let wordscount = document.getElementsByClassName('first')[0].textContent;
+
+$('#words_counter').on('click', function () {
+    let wordscount = $('.first').text();
     let myarr = wordscount.split(' ');
-    let innerText1 = document.getElementsByClassName('counter')[0];
-    innerText1.textContent += myarr.length;
+    let innerText1 = $('.counter');
+    innerText1.text(myarr.length);
     console.log(myarr.length);
 });
 
 // 4.Show Alert Text
-let alertbtn = document.getElementById('get_text');
-let txt = document.getElementsByTagName('p')[1];
-//  console.log(txt);
-alertbtn.addEventListener('click', function () {
-    alert(txt.innerText);
-    txt.remove();
+let textcontent = $('.first');
+$('#get_text').on('click', function () {
+    alert(textcontent.text());
+    textcontent.remove();
 });

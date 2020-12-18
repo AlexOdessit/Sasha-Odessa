@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW</title>
+</head>
+
+<body>
+    <form method="post" action="">
+        <p>
+            <label for="">Name</label>
+            <input type="text" id="name" placeholder="" value="name" required>
+        </p>
+        <label for="">Age</label>
+        <input type="number" id="age" value="1" min="" max="" step="2">
+        <p>
+            <label for="mail">Email</label>
+            <input type="email" id="mail" placeholder="" name="email">
+        </p>
+        <p>
+            <label for="pass">Pass</label>
+            <input type="password" id="password" placeholder="" name="pass" required>
+        </p>
+        <p>
+            <label for="Date">Date</label>
+            <input type="date" id="date" placeholder="" name="date">
+        </p>
+        <p>
+            <label for="1"></label>
+            <input type="checkbox" id="1">
+            <input type="checkbox">
+            <input type="checkbox">
+        </p>
+
+        <p>
+
+            <input type="radio" name="radio">
+            <input type="radio" name="radio">
+            <input type="radio" name="radio">
+        </p>
+
+        <p>
+            <label for="">Price</label>
+            <input type="range" id="range" placeholder="" name="range" min="8" max="200" step="1" value="1">
+        </p>
+
+
+        <textarea name="message" id="message" cols="30" rows="10">
+
+        </textarea>
+        <input type="submit" value="Send">
+
+        <select name="
+        " id="">
+            <option value="First"></option>
+            <option value="Second"></option>
+            <option value="Thrid"></option>
+        </select>
+    </form>
+    <script>
+        let range = document.getElementById('range');
+        range.addEventListener('change', function () {
+            console.log(range.value);
+        });
+
+    </script>
+</body>
+
+</html>
