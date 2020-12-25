@@ -22,6 +22,27 @@ a {
   align-items: center;
 }
 
+.hello_ivan {
+  width: 400px;
+  height: 200px;
+  color: #fff;
+  background: #000;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.hello_ivan.active {
+  display: block;
+}
+
 .cart_box {
   position: fixed;
   padding-left: 15px;
