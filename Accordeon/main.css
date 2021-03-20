@@ -164,7 +164,15 @@ header ul li a {
 /* Accordeon */
 
 .content {
-  display: none;
+  display:none;
+  opacity:0;
+  transition: all 0.8s ease-in-out;
+  background:#fff;
+}
+
+.content.show{
+  display:block;
+  opacity:1;
 }
 
 .container .accordeon {
@@ -203,7 +211,7 @@ header ul li a {
 .single {
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0.5);
+  box-shadow: 0 0 5px 2px grey;
   margin-bottom: 10px;
   max-width: 100%;
   width: 500px;

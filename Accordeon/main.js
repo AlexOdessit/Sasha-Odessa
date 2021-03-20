@@ -16,16 +16,23 @@ $(window).scroll(function () {
 
 
 // Accordeon
-$('.single h3').on('click', function () {
-  if ($(this).hasClass('active')) {
-    $(this).next().slideToggle();
-    $(this).toggleClass('active');
-  } else {
-    $('.single h3.active').next().slideUp();
-    $('.single h3.active').removeClass('active');
-    $(this).next().slideDown();
-    $(this).addClass('active');
-  }
-});
+// $('.single h3').on('click', function () {
+//   if ($(this).hasClass('active')) {
+//     $(this).next().slideToggle();
+//     $(this).toggleClass('active');
+//   } else {
+//     $('.single h3.active').next().slideUp();
+//     $('.single h3.active').removeClass('active');
+//     $(this).next().slideDown();
+//     $(this).addClass('active');
+//   }
+// });
 
 
+  let item = document.querySelectorAll('.single > h3');
+   for (i=0;i < item.length;i++){
+   item[i].addEventListener('click',function(){
+   this.classList.toggle('active');
+   this.nextElementSibling.classList.toggle('show');
+   }); 
+}

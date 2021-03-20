@@ -12,6 +12,8 @@ for (let i = 0; i < tab.length; i++) {
   });
 }
 
+
+
 $('.slider').slick({
   dots: true,
   prevArrow: '.left-nav',
